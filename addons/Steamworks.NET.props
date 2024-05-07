@@ -1,0 +1,9 @@
+<Project>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);STEAMWORKS</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="Steamworks.NET/Steamworks.NET.props" />
+
+</Project>

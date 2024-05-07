@@ -1,0 +1,9 @@
+<Project>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);EPIC</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="EOS.SDK.NET/EOS.SDK.NET.props" />
+
+</Project>
