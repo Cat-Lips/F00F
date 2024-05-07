@@ -1,0 +1,44 @@
+<Project>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);EPIC</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants Condition="'$(GodotTargetPlatform)' == 'linuxbsd'">$(DefineConstants);EOS_PLATFORM_LINUX</DefineConstants>
+    <DefineConstants Condition="'$(GodotTargetPlatform)' == 'windows'">$(DefineConstants);EOS_PLATFORM_WINDOWS_64</DefineConstants>
+    <DefineConstants Condition="'$(GodotTargetPlatform)' == 'macos'">$(DefineConstants);EOS_PLATFORM_OSX</DefineConstants>
+    <DefineConstants Condition="'$(GodotTargetPlatform)' == 'ios'">$(DefineConstants);EOS_PLATFORM_IOS</DefineConstants>
+    <DefineConstants Condition="'$(GodotTargetPlatform)' == 'android'">$(DefineConstants);EOS_PLATFORM_ANDROID</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content
+      Link="EOSSDK-Win64-Shipping.dll"
+      Include="addons/EOS.SDK.NET/Bin/EOSSDK-Win64-Shipping.dll"
+      Condition="'$(GodotTargetPlatform)' == 'windows'"
+      CopyToOutputDirectory="PreserveNewest" />
+    <Content
+      Link="libEOSSDK-Linux-Shipping.so"
+      Include="addons/EOS.SDK.NET/Bin/libEOSSDK-Linux-Shipping.so"
+      Condition="'$(GodotTargetPlatform)' == 'linuxbsd'"
+      CopyToOutputDirectory="PreserveNewest" />
+    <Content
+      Link="libEOSSDK-Mac-Shipping.dylib"
+      Include="addons/EOS.SDK.NET/Bin/libEOSSDK-Mac-Shipping.dylib"
+      Condition="'$(GodotTargetPlatform)' == 'macos'"
+      CopyToOutputDirectory="PreserveNewest" />
+    <Content
+      Link="EOSSDK.framework"
+      Include="addons/EOS.SDK.NET/Bin/IOS/EOSSDK.framework"
+      Condition="'$(GodotTargetPlatform)' == 'ios'"
+      CopyToOutputDirectory="PreserveNewest" />
+    <Content
+      Link="eossdk-StaticSTDC-release.aar"
+      Include="addons/EOS.SDK.NET/Bin/Android/static-stdc++/aar/eossdk-StaticSTDC-release.aar"
+      Condition="'$(GodotTargetPlatform)' == 'android'"
+      CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
