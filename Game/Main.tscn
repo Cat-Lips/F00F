@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://j87s37mphmm1"]
+
+[ext_resource type="PackedScene" uid="uid://cmqj6v4nctwod" path="res://addons/F00F.Core/NEW/Game/Game3D.tscn" id="1_wd0a0"]
+[ext_resource type="Script" uid="uid://bqnlapvsbgah4" path="res://Game/Main.cs" id="2_lv82p"]
+
+[node name="Root" unique_id=1971865465 instance=ExtResource("1_wd0a0")]
+script = ExtResource("2_lv82p")

@@ -1,0 +1,5 @@
+<Project>
+  <Import Project="EOS.SDK.NET/EOS.SDK.NET.props" Condition="Exists('EOS.SDK.NET')" />
+  <Import Project="Steamworks.NET/Steamworks.NET.props" Condition="Exists('Steamworks.NET')" />
+  <Import Project="debug_draw_3d.props" Condition="Exists('debug_draw_3d') AND '$(Configuration)' == 'Debug'" />
+</Project>
