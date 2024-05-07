@@ -1,0 +1,9 @@
+<Project>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);NEBULA</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="Nebula/Nebula.props" />
+
+</Project>
