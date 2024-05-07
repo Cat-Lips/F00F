@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ieo4wu272wc"]
+
+[ext_resource type="PackedScene" uid="uid://4434sxtrhcct" path="res://addons/F00F.Core/TestTools/Test3D.tscn" id="1_rxkfv"]
+[ext_resource type="Script" uid="uid://ny17pclheikp" path="res://Tests/Main.cs" id="2_befs7"]
+
+[node name="Root" instance=ExtResource("1_rxkfv")]
+script = ExtResource("2_befs7")
+
+[node name="Options" parent="UI" index="3"]
+offset_right = 192.0

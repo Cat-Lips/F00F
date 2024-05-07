@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://csxuvyp3p5byr"]
+
+[ext_resource type="Script" uid="uid://cekpdvbkf5u6e" path="res://addons/F00F/Run.cs" id="1_t0mm1"]
+
+[node name="Run" type="Node" unique_id=632012458]
+script = ExtResource("1_t0mm1")

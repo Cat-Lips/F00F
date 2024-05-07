@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://chlqctvm0olw3"]
+
+[ext_resource type="PackedScene" uid="uid://c8dfco8xkk07l" path="res://addons/F00F.Core/Game3D.tscn" id="1_wd0a0"]
+[ext_resource type="Script" uid="uid://bqnlapvsbgah4" path="res://Game/Main.cs" id="2_w1egk"]
+[ext_resource type="Script" uid="uid://ci84a8ntickpl" path="res://addons/F00F.Core/Common/3D/Camera/CameraConfig.cs" id="3_w1egk"]
+
+[sub_resource type="Resource" id="Resource_rchnd"]
+script = ExtResource("3_w1egk")
+Offset = Vector3(0, 3, 5)
+LookAt = Vector3(0, 0, -5)
+
+[node name="Root" instance=ExtResource("1_wd0a0")]
+script = ExtResource("2_w1egk")
+
+[node name="Camera" parent="." index="2"]
+Config = SubResource("Resource_rchnd")
