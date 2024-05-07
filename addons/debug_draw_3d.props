@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup>
+    <DEF>DEBUG_DRAW</DEF>
+    <PATH>addons/debug_draw_3d/gen/csharp</PATH>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants Condition="Exists('$(PATH)')">$(DefineConstants);$(DEF)</DefineConstants>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+<Project>
+
+  <PropertyGroup>
+    <DEF>NEBULA</DEF>
+    <PATH>addons/Nebula</PATH>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants Condition="Exists('$(PATH)')">$(DefineConstants);$(DEF)</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="$(PATH)/Nebula.props" Condition="Exists('$(PATH)')" />
+
+</Project>
